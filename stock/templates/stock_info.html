@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <title> 這檔股票資訊 </title>
+        <meta charset='UTF-8'>
+        <style>
+            table, th, td{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>股票資訊</h2>
+            <table>
+                <tr>
+                    <th>日期</th>
+                    <th>盤中最高價</th>
+                    <th>盤中最低價</th>
+                    <th>收盤價</th>
+                    <th>開盤價</th>
+                    <th>總成總成交股數</th>
+                    <th>總成交金額</th>
+                    <th>漲跌價差</th>
+                    <th>成交筆數</th>
+                </tr>
+            {% for stock in content %}
+                <tr>
+                    <td> {{ stock.date }} </td>
+                    <td> {{ stock.high_price }} </td>
+                    <td> {{ stock.low_price }} </td>
+            
+                    <td> {{ stock.close_price }} </td>
+                    <td> {{ stock.open_price }} </td>
+            
+                    <td> {{ stock.capacity }} </td>
+                    <td> {{ stock.turnover }} </td>
+                    <td> {{ stock.change }} </td>
+                    <td> {{ stock.transaction_list }} </td>
+
+                </tr>
+            {% endfor %}
+            </table>
+    </body>
+</html>
+
+
+

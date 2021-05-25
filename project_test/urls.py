@@ -25,27 +25,31 @@ from stock.views import stock
 from restaurants.views import comment  
 from stock.views import first,welcome2
 from stock.views import stock_list
+from stock.views import stock_info
+
 
 urlpatterns = [
     
     path('admin/', admin.site.urls),
     
-    path('hello/',hello1),
-    re_path('(\d{1,2})/plus/(\d{1,2})',okok), 
+    #path('hello/',hello1),
+    #re_path('(\d{1,2})/plus/(\d{1,2})',okok), 
     # 可以從網址輸入變數 給view的函數去使用 
     
-    re_path('(\d{1,2})/math/(\d{1,2})',math),
+    #re_path('(\d{1,2})/math/(\d{1,2})',math),
     #re_path('(\d+/math/\d)',math),
-    path('menu/', menu),
+    #path('menu/', menu),
     
     #path('meta/',meta),
-    path('welcome2/',welcome2),
-    path('restaurants_list/',list_restaurants), 
-    re_path('comment/(\d{1,5})', comment),
+    #path('restaurants_list/',list_restaurants), 
+    #re_path('comment/(\d{1,5})', comment),
     
-    path('stock/',stock),
     path('first/',first),
+    path('stock/',stock),
     path('stock_list/',stock_list),
+    path('stock_info/',stock_info),
+    
+    
     
     
 ]

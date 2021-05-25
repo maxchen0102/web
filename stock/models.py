@@ -19,7 +19,16 @@ class StockTable2330(models.Model):
     turnover = models.IntegerField(blank=True, null=True)
     transaction_list = models.IntegerField(blank=True, null=True)
     change = models.IntegerField(blank=True, null=True)
+    #restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+
 
     class Meta:
         managed = False
         db_table = 'stock_table_2330'
+        
+
+
+class Stock_list(models.Model):
+    number = models.CharField(max_length=20)
+    fullname= models.CharField(max_length=60)
+

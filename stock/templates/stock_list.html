@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title> Restaurants </title>
+        <title>選擇你想看的股票 </title>
         <style>
             table, th, td{
                 border: 1px solid black;
@@ -11,75 +11,22 @@
     </head>
     <body>
         <h2>股票列表</h2>
-        <form action="" method="get">
+        <form action="/stock_info/" method="get">
         <table>
             <tr>
                 <th>選取</th>
-                <th>股票代碼</th>
+                <th>股票代號</th>
                 <th>股票全名</th>
             </tr>
-            <tr>
+            {% for r in r1 %}
+                <tr>
                     <td> <input type="radio" name="id" value="{{r.id}}"> </td>
-                    <td> {{ '2330'}} </td>
-                    <td> {{ '台灣積體電路製造公司'}} </td>
-            </tr>
-            <tr>
-                    <td> <input type="radio" name="id" value="{{r.id}}"> </td>
-                    <td> {{ '222'}} </td>
-                    <td> {{ '222'}} </td>
-            </tr>
-            <tr>
-                    <td> <input type="radio" name="id" value="{{r.id}}"> </td>
-                    <td> {{ '222'}} </td>
-                    <td> {{ '222'}} </td>
-            </tr>
-            <tr>
-                    <td> <input type="radio" name="id" value="{{r.id}}"> </td>
-                    <td> {{ '222'}} </td>
-                    <td> {{ '222'}} </td>
-            </tr>
-            
-
-            <tr>
-                    <td> <input type="radio" name="id" value="{{r.id}}"> </td>
-                    <td> {{ '222'}} </td>
-                    <td> {{ '222'}} </td>
-            </tr>
-
-
-
-            <tr>
-                    <td> <input type="radio" name="id" value="{{r.id}}"> </td>
-                    <td> {{ '222'}} </td>
-                    <td> {{ '222'}} </td>
-            </tr>
-
-
-            <tr>
-                    <td> <input type="radio" name="id" value="{{r.id}}"> </td>
-                    <td> {{ '222'}} </td>
-                    <td> {{ '222'}} </td>
-            </tr>
-
-            <tr>
-                    <td> <input type="radio" name="id" value="{{r.id}}"> </td>
-                    <td> {{ '222'}} </td>
-                    <td> {{ '222'}} </td>
-            </tr>
-
-              <tr>
-                    <td> <input type="radio" name="id" value="{{r.id}}"> </td>
-                    <td> {{ '222'}} </td>
-                    <td> {{ '222'}} </td>
-            </tr>
-
-            <tr>
-                    <td> <input type="radio" name="id" value="{{r.id}}"> </td>
-                    <td> {{ '222'}} </td>
-                    <td> {{ '222'}} </td>
-            </tr>
+                    <td> {{r.number}} </td>
+                    <td> {{r.fullname}} </td>
+                </tr>
+            {% endfor %}
         </table>
-        <input type="submit" value="觀看一年資訊">
+        <input type="submit" value="觀看資訊">
         </form>
     </body>
 </html>
