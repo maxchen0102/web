@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'hello',
     'restaurants',
     'stock'
+
     
 ]
 
@@ -80,7 +81,7 @@ WSGI_APPLICATION = 'project_test.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'stock_test.sqlite3',
     }
 }
 

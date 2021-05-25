@@ -6,6 +6,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
+
+
+#=================================================================
+
 #=================================================================
 from django.template.loader import get_template #讓你去使用模板（外觀）
 

@@ -9,7 +9,7 @@ from django.db import models
 
 
 class StockTable2330(models.Model):
-    stock_id = models.AutoField(primary_key=True, blank=True, null=False)
+    stock_id = models.AutoField(primary_key=True, blank=True, null=True)
     date = models.IntegerField(blank=True, null=True)
     low_price = models.IntegerField(blank=True, null=True)
     high_price = models.IntegerField(blank=True, null=True)
