@@ -7,8 +7,14 @@ from django.http import HttpResponse
 
 
 #=================================================================
+from django.template.loader import get_template #讓你去使用模板（外觀）
 
 
+def menu(request):
+    
+    food = {'name': '番茄炒蛋', 'price': 60, 'comment': '好吃', 'is_spicy': False}
+    t=get_template('menu.html')
+    return HttpResponse(t.render(locals()))
 #=================================================================
 
 from django import template
@@ -77,7 +83,6 @@ def math(request,a,b):
     return HttpResponse(html)
 
 ''' 
-
 
 
 '''
