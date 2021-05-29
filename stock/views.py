@@ -17,8 +17,17 @@ from stock.models import Stock_list # 引入10支股票選項 在資料庫中 mo
 
 
 
-def stock_info(request):
+def Yang_get_COVID19(request):
+        t=get_template('gg.html')
+        return HttpResponse(t.render(locals()))
+
+
+def show_stock(request):
     if 'id' in request.GET and request.GET['id'] == '1':
+        content=StockTable2330.objects.all()
+        t=get_template('stock_info.html')
+        return HttpResponse(t.render(locals()))
+    elif 'id' in request.GET and request.GET['id'] == '2':
         content=StockTable2330.objects.all()
         t=get_template('stock_info.html')
         return HttpResponse(t.render(locals()))
@@ -27,13 +36,16 @@ def stock_info(request):
         return HttpResponse(t.render(locals()))
 
 
-
+'''
 def first(request):
     if 'stock_name' in request.GET and request.GET['stock_name'] != '':
+        #stock_name 是從get 得到的 定義了 你如果得到的話 會發生什麼事 定義在html 跳轉之類的
         return HttpResponse('Welcome!~' + request.GET['stock_name'])
     else:
-        t=get_template('first_page.html')
+        t=get_template('first_page.html') #沒有輸入東西的時候 停留在首頁 
+        #然後 輸入之後 會在html設定跳轉之後的頁面是什麼 然後會攜帶所輸入的資訊
         return HttpResponse(t.render(locals()))
+'''
 '''
 def welcome2(request):
     if 'user_name' in request.GET and request.GET['user_name'] != '':
@@ -47,10 +59,10 @@ def stock_list(request):
     r1=Stock_list.objects.all() # 把10個股票的資訊 存入choice 給html使用
     t=get_template('stock_list.html')
     return HttpResponse(t.render(locals()))
+    
 
 
-
-def stock(request):  
+def real_stock(request):  
 #=================
 #即時查詢系統 
 #================

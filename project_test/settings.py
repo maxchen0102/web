@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-serzb(h@&0ea^^25bbsfdzr(6$ff8#=7%r7v4c)z+l=e89wu+8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0d1c21a0d1d4.ngrok.io','127.0.0.1']
 
 
 # Application definition
@@ -37,8 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hello',
-    'restaurants',
     'stock'
 
     
@@ -123,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

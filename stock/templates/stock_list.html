@@ -11,7 +11,7 @@
     </head>
     <body>
         <h2>股票列表</h2>
-        <form action="/stock_info/" method="get">
+        <form action="/show_stock/" method="get">
         <table>
             <tr>
                 <th>選取</th>
@@ -27,6 +27,12 @@
             {% endfor %}
         </table>
         <input type="submit" value="觀看資訊">
+        </form>
+        <form action="/real_stock/" method="get">
+            <!action 接到的是如果你接收到東西要傳送的網指>
+            <label for="stock_name">你想找的股票</label>
+            <input id="stock_name" type="text" name="stock_name">
+            <input type="submit" value="顯示">
         </form>
     </body>
 </html>

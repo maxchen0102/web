@@ -16,39 +16,32 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,re_path
 from twstock import stock
-from hello.views import hello1
-from hello.views import okok,math
-#from hello.views import menu 
-from restaurants.views import menu ,list_restaurants
-from stock.views import stock 
-#from restaurants.views import welcome
-from restaurants.views import comment  
-from stock.views import first,welcome2
-from stock.views import stock_list
-from stock.views import stock_info
 
+#from hello.views import menu 
+
+from stock.views import real_stock 
+#from restaurants.views import welcome
+
+
+from stock.views import stock_list
+from stock.views import show_stock
+
+from stock.views import Yang_get_COVID19
 
 urlpatterns = [
     
     path('admin/', admin.site.urls),
     
-    #path('hello/',hello1),
-    #re_path('(\d{1,2})/plus/(\d{1,2})',okok), 
-    # 可以從網址輸入變數 給view的函數去使用 
+
     
-    #re_path('(\d{1,2})/math/(\d{1,2})',math),
-    #re_path('(\d+/math/\d)',math),
-    #path('menu/', menu),
+
     
-    #path('meta/',meta),
-    #path('restaurants_list/',list_restaurants), 
-    #re_path('comment/(\d{1,5})', comment),
-    
-    path('first/',first),
-    path('stock/',stock),
+    path('real_stock/',real_stock),
     path('stock_list/',stock_list),
-    path('stock_info/',stock_info),
-    
+    path('show_stock/',show_stock),
+
+
+    path('COVID_EYES__/',Yang_get_COVID19),
     
     
     
